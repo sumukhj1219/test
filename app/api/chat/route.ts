@@ -3,7 +3,7 @@ import auth from "@/auth/auth";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { prisma } from "@/lib/db";
 
-const apiKey = process.env.GEMINI_API_KEY!;
+const apiKey = "AIzaSyBurf-AdFvuisERA9Upqm-f4fRpbnaLhWA";
 const genAI = new GoogleGenerativeAI(apiKey);
 
 const modelName = "gemini-1.5-flash";
