@@ -6,10 +6,7 @@ import { redirect } from 'next/navigation'
 import React from 'react'
 
 const MapPage = () => {
-  const decoded = auth()
-  if(!decoded?.email || !decoded){
-    return redirect("/login")
-  }
+  
   return (
     <div>
       <div className='flex mt-10'>
