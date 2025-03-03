@@ -1,8 +1,7 @@
 "use client";
 import React from "react";
 import { ContainerScroll } from "../ui/container-scroll-animation";
-import Image from "next/image";
-import HackingBanner from "./banner";
+
 
 export function HeroScrollDemo() {
   return (

@@ -7,7 +7,7 @@ interface ViewIdeaComponentInterface{
   id:string
 }
 
-const ViewIdeaComponent = ({id, title, theme}:ViewIdeaComponentInterface) => {
+const ViewIdeaComponent = ({id, title}:ViewIdeaComponentInterface) => {
   return (
     <Link href={`/idea/${id}`}>
     <div className='w-full bg-gradient-to-br from-purple-400 via-purple-600 to-purple-900 rounded-lg p-4 flex items-center justify-center'>

@@ -1,6 +1,6 @@
 "use client";
 import React, { useRef } from "react";
-import { useScroll, useTransform, motion, MotionValue } from "framer-motion";
+import { useScroll,  motion} from "framer-motion";
 import HackingBanner from "../globalComponents/banner";
 
 export const ContainerScroll = ({
@@ -10,9 +10,7 @@ export const ContainerScroll = ({
   children: React.ReactNode;
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-  });
+  
   const [isMobile, setIsMobile] = React.useState(false);
 
   React.useEffect(() => {
@@ -26,10 +24,7 @@ export const ContainerScroll = ({
     };
   }, []);
 
-  const scaleDimensions = () => {
-    return isMobile ? [0.7, 0.9] : [1.05, 1];
-  };
-
+  
   return (
     <>
     <HackingBanner />

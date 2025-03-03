@@ -8,6 +8,6 @@ export async function GET() {
             return NextResponse.json({message:"Error in fetching hackathons"}, {status:404})
         return NextResponse.json({results:{hackathons}}, {status:200})
     } catch (error) {
-        return NextResponse.json({message:"Internal server error"}, {status:500})
+        return NextResponse.json({message:error}, {status:500})
     }
 }
