@@ -8,6 +8,7 @@ import React from 'react'
 
 const MyIdeaComponent = async () => {
     const decoded = await auth()
+            // @ts-expect-error
     if (!decoded || !decoded.email) {
         return redirect("/login")
     }
