@@ -5,7 +5,7 @@ const auth = async () => {
     if (!token) {
         return null
     }
-    const decoded = jwt.verify(token, process.env.JWT_SECRET!);
+    const decoded = jwt.verify(token, "SUMUKH@1219");
     return decoded
 }
 
