@@ -8,10 +8,7 @@ export async function POST(request: Request) {
   try {
     const { email, password } = await request.json();
 
-    if (!process.env.JWT_SECRET) {
-      console.error("❌ JWT_SECRET is not set");
-      return NextResponse.json({ message: "JWT_SECRET is missing" }, { status: 500 });
-    }
+    
 
     const user = await prisma.user.findUnique({
       where: { email: email }
@@ -28,7 +25,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ message: "Invalid credentials" }, { status: 401 });
     }
 
-    const token = jwt.sign({ id: user.id, email: user.email, name: user.name }, process.env.JWT_SECRET, {
+    const token = jwt.sign({ id: user.id, email: user.email, name: user.name }, "SUMUKH@1219", {
       expiresIn: "30d",
     });
 
